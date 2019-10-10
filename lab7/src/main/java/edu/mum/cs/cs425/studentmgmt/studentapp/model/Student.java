@@ -2,23 +2,27 @@ package edu.mum.cs.cs425.studentmgmt.studentapp.model;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 public class Student {
 
     @Id@GeneratedValue
     private Long studentId;
-
     private String studentNumber;
     private String firstName;
     private String middleName;
     private String lastName;
-
     private double cgpa;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    //@JoinColumn(name = "transcriptId") // Long id of Transcript class
+    private Transcript studentTranscript;
+
+    @ManyToMany(mappedBy = "studentList", cascade = CascadeType.ALL)
+    private List<Classroom> classroomList;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate dateOfEnrollment;
@@ -26,22 +30,26 @@ public class Student {
     public Student() {
     }
 
-    public Student(Long studentId, String studentNumber, String firstName, String middleName, String lastName, double cgpa, LocalDate dateOfEnrollment) {
+    public Student(Long studentId, String studentNumber, String firstName, String middleName, String lastName, double cgpa, Transcript studentTranscript, List<Classroom> classroomList, LocalDate dateOfEnrollment) {
         this.studentId = studentId;
         this.studentNumber = studentNumber;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
         this.cgpa = cgpa;
+        this.studentTranscript = studentTranscript;
+        this.classroomList = classroomList;
         this.dateOfEnrollment = dateOfEnrollment;
     }
 
-    public Student(String studentNumber, String firstName, String middleName, String lastName, double cgpa, LocalDate dateOfEnrollment) {
+    public Student(String studentNumber, String firstName, String middleName, String lastName, double cgpa, Transcript studentTranscript, List<Classroom> classroomList, LocalDate dateOfEnrollment) {
         this.studentNumber = studentNumber;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
         this.cgpa = cgpa;
+        this.studentTranscript = studentTranscript;
+        this.classroomList = classroomList;
         this.dateOfEnrollment = dateOfEnrollment;
     }
 
@@ -93,6 +101,22 @@ public class Student {
         this.cgpa = cgpa;
     }
 
+    public Transcript getStudentTranscript() {
+        return studentTranscript;
+    }
+
+    public void setStudentTranscript(Transcript studentTranscript) {
+        this.studentTranscript = studentTranscript;
+    }
+
+    public List<Classroom> getClassroomList() {
+        return classroomList;
+    }
+
+    public void setClassroomList(List<Classroom> classroomList) {
+        this.classroomList = classroomList;
+    }
+
     public LocalDate getDateOfEnrollment() {
         return dateOfEnrollment;
     }
@@ -110,6 +134,8 @@ public class Student {
                 ", middleName='" + middleName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", cgpa=" + cgpa +
+                ", studentTranscript=" + studentTranscript +
+                ", classroomList=" + classroomList +
                 ", dateOfEnrollment=" + dateOfEnrollment +
                 '}';
     }
