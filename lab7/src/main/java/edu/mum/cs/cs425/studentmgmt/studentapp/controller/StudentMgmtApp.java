@@ -21,9 +21,9 @@ public class StudentMgmtApp {
     public String showStudent(Model model){
         List<Student> studentList = studentService.getAllStudents();
 
-        for(Student stu : studentList) {
-            System.out.println("test: " + stu.getDateOfEnrollment());
-        }
+//        for(Student stu : studentList) {
+//            System.out.println("test: " + stu.getDateOfEnrollment());
+//        }
         model.addAttribute("students", studentList);
         return "list";
     }

@@ -24,7 +24,7 @@ public class Student {
     @ManyToMany(mappedBy = "studentList", cascade = CascadeType.ALL)
     private List<Classroom> classroomList;
 
-    
+
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate dateOfEnrollment;
 
