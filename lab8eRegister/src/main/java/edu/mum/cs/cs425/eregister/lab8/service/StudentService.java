@@ -1,6 +1,6 @@
-package edu.mum.cs.cs425.eregistrar.eregistrar.service;
+package edu.mum.cs.cs425.eregister.lab8.service;
 
-import edu.mum.cs.cs425.eregistrar.eregistrar.model.Student;
+import edu.mum.cs.cs425.eregister.lab8.model.Student;
 
 import java.util.List;
 

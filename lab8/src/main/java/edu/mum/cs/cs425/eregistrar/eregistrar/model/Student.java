@@ -16,9 +16,9 @@ public class Student {
     private String middleName;
     private String lastName;
     private double cgpa;
+    private Boolean international;
 
     @OneToOne(cascade = CascadeType.ALL)
-    //@JoinColumn(name = "transcriptId") // Long id of Transcript class
     private Transcript studentTranscript;
 
     @ManyToMany(mappedBy = "studentList", cascade = CascadeType.ALL)
@@ -31,7 +31,7 @@ public class Student {
     public Student() {
     }
 
-    public Student(Long studentId, String studentNumber, String firstName, String middleName, String lastName, double cgpa, Transcript studentTranscript, List<Classroom> classroomList, LocalDate dateOfEnrollment) {
+    public Student(Long studentId, String studentNumber, String firstName, String middleName, String lastName, double cgpa, Transcript studentTranscript, List<Classroom> classroomList, LocalDate dateOfEnrollment, Boolean international) {
         this.studentId = studentId;
         this.studentNumber = studentNumber;
         this.firstName = firstName;
@@ -41,9 +41,10 @@ public class Student {
         this.studentTranscript = studentTranscript;
         this.classroomList = classroomList;
         this.dateOfEnrollment = dateOfEnrollment;
+        this.international = international;
     }
 
-    public Student(String studentNumber, String firstName, String middleName, String lastName, double cgpa, Transcript studentTranscript, List<Classroom> classroomList, LocalDate dateOfEnrollment) {
+    public Student(String studentNumber, String firstName, String middleName, String lastName, double cgpa, Transcript studentTranscript, List<Classroom> classroomList, LocalDate dateOfEnrollment, Boolean international) {
         this.studentNumber = studentNumber;
         this.firstName = firstName;
         this.middleName = middleName;
@@ -52,6 +53,7 @@ public class Student {
         this.studentTranscript = studentTranscript;
         this.classroomList = classroomList;
         this.dateOfEnrollment = dateOfEnrollment;
+        this.international = international;
     }
 
     public Long getStudentId() {
@@ -126,6 +128,14 @@ public class Student {
         this.dateOfEnrollment = dateOfEnrollment;
     }
 
+    public Boolean getInternational() {
+        return international;
+    }
+
+    public void setInternational(Boolean international) {
+        this.international = international;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -138,6 +148,7 @@ public class Student {
                 ", studentTranscript=" + studentTranscript +
                 ", classroomList=" + classroomList +
                 ", dateOfEnrollment=" + dateOfEnrollment +
+                ", international=" + international +
                 '}';
     }
 }

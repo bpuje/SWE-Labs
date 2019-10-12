@@ -13,6 +13,7 @@ public class Classroom {
     private Long classroomId;
     private String buildingName;
     private String roomNumber;
+
     @ManyToMany
     private List<Student> studentList;
 
