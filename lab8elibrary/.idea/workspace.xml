@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92ffb605-85b2-4ab1-90f2-968f23e61338" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../VersionOne/screenshots/List of Students.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionOne/screenshots/add new Form.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionOne/screenshots/add new Student form data validation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionOne/screenshots/add new Student.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionOne/screenshots/edit Student.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionOne/screenshots/result of Search.png" afterDir="false" />
-    </list>
+    <list default="true" id="92ffb605-85b2-4ab1-90f2-968f23e61338" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/../../LabArchive/elibrary-democrud-web-master/target/" />
     <ignored path="$PROJECT_DIR$/../REST/elibraryrestapi/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -125,7 +118,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="725" />
@@ -243,7 +236,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570859767854" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571115967393" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
