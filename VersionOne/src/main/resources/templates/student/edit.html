@@ -106,7 +106,7 @@
                         <label for="enrollmentDate">Enrollment Date</label>
                         <span th:if="${#fields.hasErrors('enrollmentDate')}" th:errors="*{enrollmentDate}"
                               class="alert alert-danger"></span>
-                        <input id="enrollmentDate" name="enrollmentDate" type="date" class="form-control">
+                        <input id="enrollmentDate" name="enrollmentDate" type="date" value="*{enrollmentDate}" class="form-control">
                     </div>
                 </div>
                 <div class="col-md-6">

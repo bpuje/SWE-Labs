@@ -2,27 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92ffb605-85b2-4ab1-90f2-968f23e61338" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../VersionOne/src/main/java/edu/mum/cs/cs425/eregister/versionone/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionOne/src/main/java/edu/mum/cs/cs425/eregister/versionone/controller/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionOne/src/main/java/edu/mum/cs/cs425/eregister/versionone/model/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionOne/src/main/java/edu/mum/cs/cs425/eregister/versionone/repository/StudentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionOne/src/main/java/edu/mum/cs/cs425/eregister/versionone/service/StudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionOne/src/main/java/edu/mum/cs/cs425/eregister/versionone/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionOne/src/main/resources/templates/home/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionOne/src/main/resources/templates/student/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionOne/src/main/resources/templates/student/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionOne/src/main/resources/templates/student/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab8/src/main/java/edu/mum/cs/cs425/eregistrar/eregistrar/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab8/src/main/java/edu/mum/cs/cs425/eregistrar/eregistrar/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab8/src/main/java/edu/mum/cs/cs425/eregistrar/eregistrar/repository/StudentRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab8/src/main/java/edu/mum/cs/cs425/eregistrar/eregistrar/repository/StudentRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab8/src/main/java/edu/mum/cs/cs425/eregistrar/eregistrar/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab8/src/main/java/edu/mum/cs/cs425/eregistrar/eregistrar/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab8/src/main/java/edu/mum/cs/cs425/eregistrar/eregistrar/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab8/src/main/java/edu/mum/cs/cs425/eregistrar/eregistrar/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab8/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../lab8/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab8/src/main/resources/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/../lab8/src/main/resources/templates/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab8/src/main/resources/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../lab8/src/main/resources/templates/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab8/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../lab8/src/main/resources/templates/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VersionOne/src/main/resources/static/css/master.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VersionOne/src/main/resources/static/images/banner1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VersionOne/src/main/resources/static/images/panoramic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VersionOne/src/main/resources/static/images/topicals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VersionOne/src/main/resources/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VersionOne/src/main/resources/static/js/jquery-3.3.1.slim.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VersionOne/src/main/resources/static/js/popper.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VersionOne/src/main/java/edu/mum/cs/cs425/eregister/versionone/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../VersionOne/src/main/java/edu/mum/cs/cs425/eregister/versionone/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VersionOne/src/main/java/edu/mum/cs/cs425/eregister/versionone/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../VersionOne/src/main/java/edu/mum/cs/cs425/eregister/versionone/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VersionOne/src/main/java/edu/mum/cs/cs425/eregister/versionone/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../VersionOne/src/main/java/edu/mum/cs/cs425/eregister/versionone/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VersionOne/src/main/resources/templates/student/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../VersionOne/src/main/resources/templates/student/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VersionOne/src/main/resources/templates/student/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../VersionOne/src/main/resources/templates/student/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/../../LabArchive/elibrary-democrud-web-master/target/" />
@@ -315,6 +306,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="725" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

@@ -43,17 +43,19 @@ public class StudentController {
             return "student/new";
         }
         student = studentService.saveStudent(student);
+        //System.out.println("End hewlej uzew =====" + student);
         return "redirect:/eregister/student/list";
     }
 
 
-    @GetMapping(value = "{/eregister/student/edit{studentId}")
-    public String editStudent(@PathVariable Integer studentId, Model model){
+    @GetMapping(value = {"/eregister/student/edit/{studentId}"})
+    public String editStudentForm(@PathVariable Integer studentId, Model model){
         Student student = studentService.getStudentById(studentId);
         if(student != null){
             model.addAttribute("student", student);
             return "student/edit";
         }
+//        System.out.println("editStudent ====" + student.getFirstName());
         return "student/list";
     }
 

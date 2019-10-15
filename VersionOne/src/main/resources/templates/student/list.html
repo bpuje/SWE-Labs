@@ -10,7 +10,9 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/master.css}">
     <title>eregister - a demo spring boot webapp featuring CRUD - List Students</title>
 </head>
+
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a style="padding-right: 2em;" class="navbar-brand" href="/eregister/home">eRegister : : : a CRUD demo webapp</a>
 
@@ -55,8 +57,8 @@
     </form>
 
     <div style="font-size: 1em">
-        <table class="table table-striped">
-            <thead>
+        <table class="table table-hover">
+            <thead class="thead-primary">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Student ID</th>
@@ -71,23 +73,23 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="student,iterStat : ${students}">
-                <!--th:onclick="@{document.location='/eregister/book/edit/{bookId}'(bookId=${book.bookId})}" -->
+            <tr th:each="student,iterStat : ${students}"
+                th:onclick="@{document.location='/eregister/student/edit/{studentId}'(studentId=${student.studentId})}" >
                 <th scope="row" th:text="${iterStat.count}"></th>
-                <td th:text="${student.studentId}"></td>
-                <td th:text="${student.studentNumber}"></td>
-                <td th:text="${student.firstName}"></td>
-                <td th:text="${student.middleName}"></td>
-                <td th:text="${student.lastName}"></td>
-                <td th:text="${student.cgpa}"></td>
-                <td th:text="${student.enrollmentDate}"></td>
-                <td th:text="${student.international}"></td>
-                <td><a th:href="@{'/eregister/book/edit/{bookId}'(studentId=${student.studentId})}">Edit</a></td>
+                <td th:text="${student.studentId}" hidden>&nbsp;</td>
+                <td th:text="${student.studentNumber}">&nbsp;</td>
+                <td th:text="${student.firstName}">&nbsp;</td>
+                <td th:text="${student.middleName}">&nbsp;</td>
+                <td th:text="${student.lastName}">&nbsp;</td>
+                <td th:text="${student.cgpa}">&nbsp;</td>
+                <td th:text="${student.enrollmentDate}">&nbsp;</td>
+                <td th:text="${student.international}">&nbsp;</td>
+                <td><a th:href="@{'/eregister/student/edit/{studentId}'(studentId=${student.studentId})}">Edit</a></td>
                 <td>
-                    <a data-toggle="modal" data-target="#confirmDeleteBookModal" th:href="@{'/eregister/book/delete/' + ${student.studentId}}">Delete</a>
-                    <!--                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">-->
-                    <!--                            Launch demo modal-->
-                    <!--                        </button>-->
+                    <a data-toggle="modal" data-target="#confirmDeleteStudentModal" th:href="@{'/eregister/student/delete/' + ${student.studentId}}">Delete</a>
+                                            <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirmDeleteStudentModal">
+                                                Launch demo modal
+                                            </button>-->
                 </td>
             </tr>
             <tr th:if="${studentsCount < 1}">
@@ -99,7 +101,7 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="confirmDeleteBookModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="confirmDeleteStudentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -131,8 +133,10 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+<script src="http://localhost:9292/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="http://localhost:9292/js/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
+<script src="http://localhost:9292/js/popper.min.js" type="text/javascript"></script>
+
 </body>
 </html>

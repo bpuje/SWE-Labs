@@ -34,7 +34,10 @@ public class Student {
     public Student() {
     }
 
-    public Student(@NotBlank(message = "* Student Number is required") String studentNumber, @NotBlank(message = "* First Name is required") String firstName, String middleName, @NotBlank(message = "* Last Name is required") String lastName, @NotBlank(message = "* CGPA is required") Double cgpa, LocalDate enrollmentDate, Boolean international) {
+    public Student(@NotBlank(message = "* Student Number is required") String studentNumber,
+                   @NotBlank(message = "* First Name is required") String firstName, String middleName,
+                   @NotBlank(message = "* Last Name is required") String lastName,
+                   @NotBlank(message = "* CGPA is required") Double cgpa, LocalDate enrollmentDate, Boolean international) {
         this.studentNumber = studentNumber;
         this.firstName = firstName;
         this.middleName = middleName;
