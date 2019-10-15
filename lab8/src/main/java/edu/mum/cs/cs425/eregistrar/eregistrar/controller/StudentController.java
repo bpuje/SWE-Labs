@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+import java.text.ParseException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.List;
 
 @Controller
@@ -68,8 +72,8 @@ public class StudentController {
             model.addAttribute("errors", bindingResult.getAllErrors());
             return "student/edit";
         }
-        //student = studentService.saveStudent(student);
-        return "redirect:/student/list";
+        student = studentService.saveStudent(student);
+        return "redirect:/list";
     }
 
     @GetMapping(value = {"/student/delete/{studentId}"})
@@ -79,4 +83,15 @@ public class StudentController {
         return "redirect:/student/list";
     }
 
+
+    @GetMapping(value = {"/search"})
+    public ModelAndView searchStudents(@RequestParam String searchString){
+        ModelAndView modelAndView = new ModelAndView();
+        List<Student> students = studentService.searchStudents(searchString);
+        modelAndView.addObject("students", students);
+        modelAndView.addObject("searchString", searchString);
+        modelAndView.addObject("studentsCount", students.size());
+        modelAndView.setViewName("list");
+        return modelAndView;
+    }
 }

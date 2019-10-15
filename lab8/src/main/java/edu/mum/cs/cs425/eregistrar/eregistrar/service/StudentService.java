@@ -6,7 +6,11 @@ import java.util.List;
 
 public interface StudentService {
     abstract List<Student> getAllStudents();
-    abstract void saveStudent(Student student);
+    abstract Student saveStudent(Student student);
     abstract Student getStudentById(Long studentId);
     abstract void deleteStudentById(Long studentId);
+
+
+    abstract List<Student> searchStudents(String searchStudent);
+
 }

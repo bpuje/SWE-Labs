@@ -36,18 +36,19 @@
 
     <div style="padding-top:1em;" class="container">
         <div style="margin-bottom: 1em;">
-            <span style="font-size: 2em; color: #32a5e7;">Edit Book data with ISBN: [[${book.isbn}]]</span>
+            <span style="font-size: 2em; color: #32a5e7;">Edit Student data with studentId: [[${student.studentId}]]</span>
         </div>
 
         <form id="editStudentForm" method="post" action="/edit" th:object="${student}">
             <fieldset>
-                <input type="hidden" name="studentId" th:value="${student.studentId}"/>
+                <input type="hidden" name="studentId" th:value="${student.studentNumber}"/>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="title">Book Title</label>
+                            <label for="title">Student Title</label>
+                            <!--/*@thymesVar id="student" type=""*/-->
                             <input id="title" name="title" type="text" class="form-control"
-                                   th:value="${student.title}">
+                                   th:value="${student.}">
                         </div>
                     </div>
                 </div>

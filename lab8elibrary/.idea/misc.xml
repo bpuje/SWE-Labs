@@ -5,6 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/../../LabArchive/elibrary-democrud-web-master/pom.xml" />
+        <option value="$PROJECT_DIR$/../REST/elibraryrestapi/pom.xml" />
       </list>
     </option>
   </component>
