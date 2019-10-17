@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+	layout:decorate="~{common/masterlayout}">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/homepage/index.css}" />
+    <title>MidWesTen Bank - Register a New customer</title>
+</head>
+<body>
+    <th:block layout:fragment="content">
+        <form id="customerForm" method="post" action="/customers/add" th:object="${customer}">
+	        <legend>New customer Form</legend>
+            <input type="hidden" name="customerId" th:value="${customer.customerId}" />
+            <div class="form-group">
+                <label for="customerNumber">Customer Number</label>
+                <span th:if="${#fields.hasErrors('customerNumber')}" th:errors="*{customerNumber}"
+					class="alert alert-danger"></span>
+                <input id="supplierNumber" name="customerNumber" type="text" class="form-control" th:field="*{customerNumber}">
+            </div>
+            <div class="row">
+            	<div class="col">
+            		<div class="form-group">
+	                    <label for="firstName">First Name</label>
+	                    <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"
+	                                    class="alert alert-danger"></span>
+	                    <input id="firstName" name="firstName" type="text" class="form-control" th:field="*{firstName}">
+            		</div>
+            		<div class="form-group">
+	                    <label for="email">Email</label>
+	                    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+	                                    class="alert alert-danger"></span>
+	                    <input id="email" name="email" type="email" class="form-control" th:field="*{email}">
+            		</div>
+            	</div>
+            	<div class="col">
+            		<div class="form-group">
+	                    <label for="middleName">Middle Name</label>
+	                    <span th:if="${#fields.hasErrors('middleName')}" th:errors="*{middleName}"
+	                                    class="alert alert-danger"></span>
+	                    <input id="middleName" name="middleName" type="text" class="form-control" th:field="*{middleName}">
+            		</div>
+            		<div class="form-group">
+	                    <label for="contactPhoneNumber">Contact Phone Number</label>
+	                    <span th:if="${#fields.hasErrors('contactPhoneNumber')}" th:errors="*{contactPhoneNumber}"
+	                                    class="alert alert-danger"></span>
+	                    <input id="contactPhoneNumber" name="contactPhoneNumber" type="tel" class="form-control" th:field="*{contactPhoneNumber}">
+            		</div>
+            	</div>
+            	<div class="col">
+            		<div class="form-group">
+	                    <label for="lastName">Last Name</label>
+	                    <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"
+	                                    class="alert alert-danger"></span>
+	                    <input id="lastName" name="lastName" type="text" class="form-control" th:field="*{lastName}">
+            		</div>
+            		<div class="form-group">
+	                    <label for="dateOfBirth">Date of Birth</label>
+	                    <span th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}"
+	                                    class="alert alert-danger"></span>
+	                    <input id="dateOfBirth" name="dateOfBirth" type="date" class="form-control" th:field="*{dateOfBirth}">
+            		</div>
+            	
+            	</div>
+            
+            </div>
+            <div style="float:left;">
+                <a href="/customers/add" class="btn btn-outline-primary" style="width: 140px;">Reset</a>&nbsp;&nbsp;&nbsp;
+                <a href="/customers/list" class="btn btn-outline-warning" style="width: 140px;">Cancel</a>&nbsp;&nbsp;&nbsp;
+                <button id="btnSubmit" type="submit" class="btn btn-outline-danger" style="width: 140px;">Register Customer</button>
+            </div>  
+        </form>
+    </th:block>
+
+    <th:block layout:fragment="footer"></th:block>
+
+</body>
+</html>

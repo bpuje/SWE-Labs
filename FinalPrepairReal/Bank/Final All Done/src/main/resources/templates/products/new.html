@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+	layout:decorate="~{common/masterlayout}">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/homepage/index.css}" />
+    <title>Products Management App - Add a New Product</title>
+</head>
+<body onload="document.querySelector('#productNumber').focus();">
+    <th:block layout:fragment="content">
+        <form id="productForm" method="post" action="/products/add" th:object="${product}">
+	        <legend>New Product Form</legend>
+        	<div class="row">
+	            <div class="col">
+	                <input type="hidden" name="productId" th:value="${product.productId}" />
+	                <div class="form-group">
+	                    <label for="productNumber">Product Number</label>
+	                    <span th:if="${#fields.hasErrors('productNumber')}" th:errors="*{productNumber}"
+										class="alert alert-danger"></span>
+	                    <input id="productNumber" name="productNumber" type="text" class="form-control" th:field="*{productNumber}">
+	                </div>
+	                <div class="form-group">
+	                        <label for="name">Name</label>
+	                        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
+	                                        class="alert alert-danger"></span>
+	                        <input id="name" name="name" type="text" class="form-control" th:field="*{name}">
+	                </div>               
+	                <div class="form-group">
+	                        <label for="unitPrice">Unit Price</label>
+	                        <span th:if="${#fields.hasErrors('unitPrice')}" th:errors="*{unitPrice}"
+	                            class="alert alert-danger"></span>
+	                        <input id="unitPrice" name="unitPrice" type="text" class="form-control" th:field="*{unitPrice}">
+	                </div>
+				</div>
+				<div class="col"> 
+	                <div class="form-group">
+	                    <label for="quantityInStock">Quantity In Stock</label>
+	                    <span th:if="${#fields.hasErrors('productNumber')}" th:errors="*{productNumber}"
+										class="alert alert-danger"></span>
+	                    <input id="quantityInStock" name="quantityInStock" type="text" class="form-control" th:field="*{quantityInStock}">
+	                </div> 
+	                <div class="form-group">
+	                    <label for="supplier">Supplier</label>
+	                    <span th:if="${#fields.hasErrors('productNumber')}" th:errors="*{productNumber}"
+										class="alert alert-danger"></span>
+										
+	                    <!--select class="form-control" id="supplier" name="supplier" th:field="${supplier.supplierId}">
+							<option th:each="supplier : ${suppliers}" th:value="${supplier.supplierId}" th:text="${supplier.name}"></option>
+						</select-->
+						
+				        <!-- select class="form-control" id="supplier" name="supplier">
+							<option th:each="supplier : ${suppliers}" th:value="${supplier.supplierId}" th:text="${supplier.name}"></option>
+						</select-->
+						
+						<select class="form-control" id="supplier" th:field="*{supplier}">
+							<option th:each="supp : ${suppliers}" th:value="${{supp.supplierId}}" th:text="${supp.name}"></option>
+						</select>
+						
+	                </div>
+	                <div class="form-group">
+	                        <label for="dateSupplied">Date Manufactured</label>
+	                        <span th:if="${#fields.hasErrors('dateSupplied')}" th:errors="*{dateSupplied}"
+	                            class="alert alert-danger"></span>
+	                        <input id="dateSupplied" name="dateSupplied" type="date" class="form-control" aria-describedby="dateSuppliedHelp" th:field="*{dateSupplied}">
+	                        <small id="dateSuppliedHelp" class="form-text text-muted">Enter a valid Date.</small>
+	                </div>
+				</div>
+			</div>
+            <div style="float:right;">
+                <a href="/products/add" class="btn btn-outline-secondary" style="width: 122px;">Reset</a>&nbsp;&nbsp;&nbsp;
+                <a href="/products/list" class="btn btn-outline-danger" style="width: 122px;">Cancel</a>&nbsp;&nbsp;&nbsp;
+                <button id="btnSubmit" type="submit" class="btn btn-outline-success" style="width: 122px;">Add Product</button>
+            </div>         
+        </form>
+        
+    </th:block>
+
+    <th:block layout:fragment="footer"></th:block>
+
+</body>
+</html>

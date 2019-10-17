@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Register page</title>
+</head>
+<body>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/state/list">States</a></li>
+        <li class="breadcrumb-item"><a href="/citizen/list">Citizens</a></li>
+    </ol>
+</nav>
+
+
+
+
+<div class="container">
+    <!-- Content here -->
+    <h2>Register New Citizen</h2>
+    <form id="citizenRegisterForm" method="post" action="/citizen/register" th:object="${citizen}">
+        <fieldset>
+            <input type="hidden" name="citizenId" th:value="${citizen.citizenId}"/>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"
+                              class="alert alert-danger"></span>
+                        <input id="firstName" name="firstName" type="text" class="form-control"
+                               th:value="${citizen.firstName}">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="middleName">Middle Name</label>
+                        <span th:if="${#fields.hasErrors('middleName')}" th:errors="*{middleName}"
+                              class="alert alert-danger"></span>
+                        <input id="middleName" name="middleName" type="text" class="form-control"
+                               th:value="${citizen.middleName}">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"
+                              class="alert alert-danger"></span>
+                        <input id="lastName" name="lastName" type="text" class="form-control"
+                               th:value="${citizen.lastName}">
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="socialSecurityNumber">SSN</label>
+
+                        <input id="socialSecurityNumber" name="socialSecurityNumber" type="text" class="form-control"
+                               th:value="${citizen.socialSecurityNumber}">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="yearlyIncome">Unit Price</label>
+                        <span th:if="${#fields.hasErrors('yearlyIncome')}" th:errors="*{yearlyIncome}"
+                              class="alert alert-danger"></span>
+                        <input id="yearlyIncome" name="yearlyIncome" type="text" class="form-control"
+                               th:value="${citizen.yearlyIncome}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="dateOfBirth">Supplied date</label>
+                        <span th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}"
+                              class="alert alert-danger"></span>
+                        <input id="dateOfBirth" name="dateOfBirth" type="date" class="form-control"
+                               required="required" autofocus th:value="${citizen.dateOfBirth}">
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <label for="state">State:</label>
+                    <span th:if="${#fields.hasErrors('state')}" th:errors="*{state}"
+                          class="alert alert-danger"></span>
+                    <select name="state" id="state" class="form-control" required="required" autofocus>
+                        <option value="">Select a state</option>
+                        <option th:each="state : ${states}" th:value="${state.stateId}"
+                                th:text="${state.stateName}+' - '+${state.stateCode}+'></option>
+
+                    </select>
+                </div>
+
+
+            </div>
+
+            <div style="float:right;">
+                <a href="/citizen/list" class="btn btn-outline-warning">Cancel</a>&nbsp;&nbsp;&nbsp;
+                <button id="btnSubmit" type="submit" class="btn btn-outline-success">Save Citizen</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

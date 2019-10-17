@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+	layout:decorate="~{common/masterlayout}">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/accounts/index.css}" />
+    <title>accounts Management App - Browse List of accounts</title>
+</head>
+<body>
+    <th:block layout:fragment="content">
+        <div>
+            <span style="font-size: 1.5em">List of Accounts</span>
+            <span style="float:right;">
+                <a class="btn btn-outline-info" href="/accounts/add">Open a New account</a>
+            </span>
+        </div>
+        <p>&nbsp;</p>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Account Number</th>
+                    <th scope="col">Customer</th>
+                    <th scope="col">Type of Account</th>
+                    <th scope="col">Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="datarow" th:each="account,iterStat : ${accounts}">
+                    <th scope="row" th:text="${iterStat.count}+'.'"></th>
+                    <td th:text="${account.accountNumber}"></td>
+                    <td th:text="${account.customer.fullName}"></td>
+                    <td th:text="${account.accountType.accountTypeName}"></td>
+                    <td th:text="${#numbers.formatCurrency(account.balance)}"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div th:text="${#numbers.formatCurrency(net)}"></div>
+    </th:block>
+
+    <th:block layout:fragment="footer"></th:block>
+    
+</body>
+</html>

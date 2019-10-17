@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+	layout:decorate="~{common/masterlayout}">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/homepage/index.css}" />
+    <title>accounts Management App - Add a New account</title>
+</head>
+<body onload="document.querySelector('#accountNumber').focus();">
+    <th:block layout:fragment="content">
+        <form id="accountForm" method="post" action="/accounts/add" th:object="${account}">
+	        <legend>New Account Form</legend>
+        	
+       		<div class="form-group">
+        		<label for="customer">Customer</label>
+                <span th:if="${#fields.hasErrors('customer')}" th:errors="*{customer}"
+							class="alert alert-danger"></span>
+				<select class="form-control" id="customer" th:field="*{customer}">
+					<option th:each="cus : ${customers}" th:value="${{cus.customerId}}" th:text="${cus.asText}"></option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+                   <label for="accountNumber">Account Number</label>
+                   <span th:if="${#fields.hasErrors('accountNumber')}" th:errors="*{accountNumber}"
+								class="alert alert-danger"></span>
+                   <input id="accountNumber" name="accountNumber" type="text" class="form-control" th:field="*{accountNumber}">
+               </div>
+       	
+        	<div class="form-group">
+        		<label for="accountType">Customer</label>
+                <span th:if="${#fields.hasErrors('accountType')}" th:errors="*{accountType}"
+							class="alert alert-danger"></span>
+				<select class="form-control" id="accountType" th:field="*{accountType}">
+					<option th:each="at : ${accountTypes}" th:value="${{at.accountTypeId}}" th:text="${at.accountTypeName}"></option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+                <label for="balance">Balance</label>
+                <span th:if="${#fields.hasErrors('balance')}" th:errors="*{balance}"
+                    class="alert alert-danger"></span>
+                <input id="balance" name="balance" type="text" class="form-control" th:field="*{balance}">
+            </div>
+            <div style="float:right;">
+                <a href="/accounts/add" class="btn btn-outline-secondary" style="width: 122px;">Reset</a>&nbsp;&nbsp;&nbsp;
+                <a href="/accounts/list" class="btn btn-outline-danger" style="width: 122px;">Cancel</a>&nbsp;&nbsp;&nbsp;
+                <button id="btnSubmit" type="submit" class="btn btn-outline-success" style="width: 122px;">Add account</button>
+            </div>
+        </form>
+        
+    </th:block>
+
+    <th:block layout:fragment="footer"></th:block>
+
+</body>
+</html>

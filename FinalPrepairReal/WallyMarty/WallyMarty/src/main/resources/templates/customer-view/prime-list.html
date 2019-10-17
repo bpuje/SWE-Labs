@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+	layout:decorate="~{common/masterlayout}">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/products/index.css}" />
+    <title>Customer Relationship Management system (CRM) - Browse List of Prime Customers</title>
+</head>
+<body>
+    <th:block layout:fragment="content">
+        <div>
+            <span style="font-size: 1.5em">List of Prime Customers</span>
+            
+        </div>
+        <p>&nbsp;</p>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Customer Number</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Contact Phone NUmber</th>
+                    <th scope="col">Date of birth</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="datarow" th:each="c,iterStat : ${primeCustomers}">
+                    <th scope="row" th:text="${iterStat.count}+'.'"></th>
+                    <td th:text="${c.customerNumber}"></td>
+                    <td th:text="${c.name}"></td>
+                    <td th:text="${c.contactPhoneNumber}"></td>
+                    <td th:text="${c.dateOfBirth}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </th:block>
+
+    <th:block layout:fragment="footer"></th:block>
+    
+</body>
+</html>

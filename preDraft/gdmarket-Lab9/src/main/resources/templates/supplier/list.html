@@ -1,0 +1,144 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Supplier lists</title>
+</head>
+<body>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/gdmarket/home">Home</a></li>
+        <li class="breadcrumb-item"><a href="/supplier/list">Suppliers</a></li>
+        <li class="breadcrumb-item"><a href="/product/list">Products</a></li>
+    </ol>
+</nav>
+
+<!--<div class="container">-->
+    <!--&lt;!&ndash; Content here &ndash;&gt;-->
+    <!--<div>-->
+        <!--<span style="font-size: 2em; color: #32a5e7;">Suppliers</span>-->
+        <!--<span style="float:right;">-->
+                <!--<a class="btn btn-outline-success btn-lg" href="/supplier/new">Register New Supplier</a>-->
+        <!--</span>-->
+    <!--</div>-->
+
+    <!--<div style="font-size: 1em">-->
+        <!--<table class="table table-hover">-->
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th scope="col">#</th>-->
+                <!--<th scope="col">Supplier Name</th>-->
+                <!--<th scope="col">Supplier Number</th>-->
+                <!--<th scope="col">Contact</th>-->
+                <!--<th scope="col">&nbsp;</th>-->
+                <!--<th scope="col">&nbsp;</th>-->
+                <!--<th scope="col">&nbsp;</th>-->
+                <!--<th scope="col">&nbsp;</th>-->
+                <!--<th scope="col">&nbsp;</th>-->
+                <!--<th scope="col">&nbsp;</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr th:each="supplier,iterStat : ${suppliers}" th:onclick="@{document.location='/supplier/edit/{supplierId}'(supplierId=${supplier.supplierId})}">-->
+
+                <!--<th scope="row" th:text="${iterStat.count}+${currentPageNo}*5"></th>-->
+                <!--<td th:text="${supplier.name}"></td>-->
+                <!--<td th:text="${supplier.supplierNumber}"></td>-->
+                <!--<td th:text="${supplier.contactPhoneNumber}"></td>-->
+
+
+            <!--</tr>-->
+            <!--</tbody>-->
+        <!--</table>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;<div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<nav aria-label="pagination">&ndash;&gt;-->
+            <!--&lt;!&ndash;<ul class="pagination justify-content-center">&ndash;&gt;-->
+                <!--&lt;!&ndash;<li class="page-item disabled">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a class="page-link" href="#">Pages: </a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li th:each="i : ${#numbers.sequence(1, suppliers.totalPages)}"&ndash;&gt;-->
+                    <!--&lt;!&ndash;th:class="${currentPageNo}==${i-1}?'page-item active':'page-item'">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a th:href="@{/supplier/list(pageNo=${i-1})}"&ndash;&gt;-->
+                       <!--&lt;!&ndash;th:text="${i}" class = "page-link"></a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+        <!--&lt;!&ndash;</nav>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+
+
+
+
+<!--</div>-->
+
+
+
+
+<div style="margin-top:1em;margin-bottom:1em;" class="container">
+    <div>
+        <span style="font-size: 2em; color: #32a5e7;">List of Supplier</span>
+        <span style="float:right;">
+                <a class="btn btn-outline-success btn-lg" href="/supplier/new">Add a new supplier</a>
+            </span>
+    </div>
+
+
+    <div style="font-size: 1em">
+        <table class="table table-hover">
+            <thead class="thead-primary">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Supplier Number</th>
+                <th scope="col">Name</th>
+                <th scope="col">Contact Phone Number</th>
+                <th scope="col">&nbsp;</th>
+                <th scope="col">&nbsp;</th>
+                <th scope="col">&nbsp;</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="supplier,iterStat : ${suppliers}">
+                <!--th:onclick="@{document.location='/goldendome/product/edit/{productId}'(productId=${product.productId})}" >-->
+                <th scope="row" th:text="${iterStat.count}"></th>
+                <td th:text="${supplier.supplierId}" hidden>&nbsp;</td>
+                <td th:text="${supplier.supplierNumber}">&nbsp;</td>
+                <td th:text="${supplier.name}">&nbsp;</td>
+                <td th:text="${supplier.contactPhoneNumber}">&nbsp;</td>
+                <!--<td th:text="${supplier.products}">&nbsp;</td>-->
+
+                <!--<td><a th:href="@{'/goldendome/product/edit/{productId}'(supplierId=${supplier.supplierId})}">Edit</a></td>-->
+                <!--<td>-->
+                <!--<a data-toggle="modal" data-target="#confirmDeleteproductModal" th:href="@{'/goldendome/product/delete/' + ${supplier.supplierId}}">Delete</a>-->
+                <!--&lt;!&ndash;<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirmDeleteproductModal">-->
+                <!--Launch demo modal-->
+                <!--</button>&ndash;&gt;-->
+                <!--</td>-->
+            </tr>
+            <!--<tr th:if="${suppliersCount < 1}">-->
+            <!--<td colspan="8" th:align="center">No products found</td>-->
+            <!--</tr>-->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+	layout:decorate="~{common/masterlayout}">
+
+	<head>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/homepage/index.css}" />
+    <title>Customer Relationship Management (CRM) system  - Add a New Customer</title>
+	</head>
+	
+	<body>
+	 <th:block layout:fragment="content">
+		 <form id="customerForm" method="post" action="/customer/add" th:object="${customer}">
+	        <legend>New Customer Form</legend>
+        	<div class="row">
+	            <div class="col">
+	             	<div class="form-group">
+	                    <label for="name">Customer Number</label>
+	                    <span th:if="${#fields.hasErrors('customerNumber')}" th:errors="*{customerNumber}"
+										class="alert alert-danger"></span>
+	                    <input id="customerNumber" name="customerNumber" type="text" class="form-control" th:field="*{customerNumber}">
+	                </div> 
+	                <div class="form-group">
+	                    <label for="name">Name</label>
+	                    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
+										class="alert alert-danger"></span>
+	                    <input id="name" name="name" type="text" class="form-control" th:field="*{name}">
+	                </div> 
+				</div>
+				<div class="col"> 
+					<div class="form-group">
+	                        <label for="dateOfBirth">Contact Phone NUmber</label>
+	                        <span th:if="${#fields.hasErrors('contactPhoneNumber')}" th:errors="*{contactPhoneNumber}"
+	                            class="alert alert-danger"></span>
+	                        <input id="contactPhoneNumber" name="contactPhoneNumber" type="tel" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}"required class="form-control" th:field="*{contactPhoneNumber}">
+            				<span class = "note"> Format: 123-456-7890 </span>
+	                </div>
+	                <div class="form-group">
+	                        <label for="dateOfBirth">Date Of Birth</label>
+	                        <span th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}"
+	                            class="alert alert-danger"></span>
+	                        <input id="dateOfBirth" name="dateOfBirth" type="date" class="form-control" aria-describedby="dateOfBirthHelp" th:field="*{dateOfBirth}">
+	                        <small id="dateOfBirthHelp" class="form-text text-muted">Enter a valid Date</small>
+	                </div>
+				</div>
+			</div>
+            <div style="float:right;">
+            
+            	<!-- doorh baagiinuudiin href deer bgaa CustomerContoller deer bgaa requestMapping 
+            		parameter.tei yag taarah yostoi -->
+                <a href="/customer/add" class="btn btn-outline-secondary" style="width: 130px;">Reset</a>&nbsp;&nbsp;&nbsp;
+                <a href="/customer/list" class="btn btn-outline-danger" style="width: 130px;">Cancel</a>&nbsp;&nbsp;&nbsp;
+                <button id="btnSubmit" type="submit" class="btn btn-outline-success" style="width: 130px;">Add customer</button>
+            </div>         
+        </form>
+        
+	</th:block>
+	
+	<th:block layout:fragment="footer"></th:block>
+	</body>
+
+
+</html>>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+	layout:decorate="~{common/masterlayout}">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/homepage/index.css}" />
+    <title>suppliers Management App - Add a New supplier</title>
+</head>
+<body onload="document.querySelector('#supplierNumber').focus();">
+    <th:block layout:fragment="content">
+        <form id="supplierForm" method="post" action="/suppliers/add" th:object="${supplier}">
+	        <legend>New supplier Form</legend>
+            <input type="hidden" name="supplierId" th:value="${supplier.supplierId}" />
+            <div class="form-group">
+                <label for="supplierNumber">Supplier Number</label>
+                <span th:if="${#fields.hasErrors('supplierNumber')}" th:errors="*{supplierNumber}"
+					class="alert alert-danger"></span>
+                <input id="supplierNumber" name="supplierNumber" type="text" class="form-control" th:field="*{supplierNumber}">
+            </div>
+            <div class="form-group">
+                    <label for="name">Name</label>
+                    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
+                                    class="alert alert-danger"></span>
+                    <input id="name" name="name" type="text" class="form-control" th:field="*{name}">
+            </div>               
+            <div class="form-group">
+                    <label for="contactPhoneNumber">Contact Phone Number</label>
+                    <span th:if="${#fields.hasErrors('contactPhoneNumber')}" th:errors="*{contactPhoneNumber}"
+                        class="alert alert-danger"></span>
+                    <input id="contactPhoneNumber" name="contactPhoneNumber" type="text" class="form-control" th:field="*{contactPhoneNumber}">
+            </div>
+            <div style="float:right;">
+                <a href="/suppliers/add" class="btn btn-outline-secondary" style="width: 122px;">Reset</a>&nbsp;&nbsp;&nbsp;
+                <a href="/suppliers/list" class="btn btn-outline-danger" style="width: 122px;">Cancel</a>&nbsp;&nbsp;&nbsp;
+                <button id="btnSubmit" type="submit" class="btn btn-outline-success" style="width: 122px;">Add Supplier</button>
+            </div>  
+        </form>
+    </th:block>
+
+    <th:block layout:fragment="footer"></th:block>
+
+</body>
+</html>

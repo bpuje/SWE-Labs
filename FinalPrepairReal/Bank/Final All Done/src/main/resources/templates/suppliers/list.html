@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+	layout:decorate="~{common/masterlayout}">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/products/index.css}" />
+    <title>Products Management App - Browse List of Supplier</title>
+</head>
+<body>
+    <th:block layout:fragment="content">
+        <div>
+            <span style="font-size: 1.5em">List of Suppliers in stock</span>
+            <span style="float:right;">
+                <a class="btn btn-outline-info" href="/suppliers/add">Add a New Supplier</a>
+            </span>
+        </div>
+        <p>&nbsp;</p>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Supplier Number</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Contact phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="datarow" th:each="supplier,iterStat : ${suppliers}">
+                    <th scope="row" th:text="${iterStat.count}+'.'"></th>
+                    <td th:text="${supplier.supplierNumber}"></td>
+                    <td th:text="${supplier.name}"></td>
+                    <td th:text="${supplier.contactPhoneNumber}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </th:block>
+
+    <th:block layout:fragment="footer"></th:block>
+    
+</body>
+</html>
