@@ -65,7 +65,8 @@
                         <label class="form-check-label" for="supplier">Supplier</label>
                         <span th:if="${#fields.hasErrors('supplier')}" th:errors="*{supplier}"
                               class="alert alert-danger"></span>
-                        <select th:field="${product.supplier}" class="form-control" id="supplier" name="supplier" required="required" autofocus>
+                        <select th:field="${product.supplier}" class="form-control"
+                                id="supplier" name="supplier" required="required" autofocus>
                             <option value="">Select a supplier</option>
                             <option th:each="supplier : ${suppliers}"
                                     th:value="${supplier.supplierId}"

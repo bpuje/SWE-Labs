@@ -2,88 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92ffb605-85b2-4ab1-90f2-968f23e61338" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../VersionTwo/src/main/java/edu/mum/cs/cs425/eregister/versionone/controller/MyCustomerMgmtApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionTwo/src/main/java/edu/mum/cs/cs425/eregister/versionone/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionTwo/src/main/java/edu/mum/cs/cs425/eregister/versionone/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionTwo/src/main/java/edu/mum/cs/cs425/eregister/versionone/model/Supplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionTwo/src/main/java/edu/mum/cs/cs425/eregister/versionone/repository/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionTwo/src/main/java/edu/mum/cs/cs425/eregister/versionone/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionTwo/src/main/java/edu/mum/cs/cs425/eregister/versionone/service/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionTwo/src/main/resources/templates/customer/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionTwo/src/main/resources/templates/customer/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionTwo/src/main/resources/templates/customer/new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionTwo/src/main/resources/templates/home/hello.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionTwo/src/main/resources/templates/home/index3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VersionTwo/src/main/resources/templates/product/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../goldendomeVersionThree/src/main/java/edu/mum/cs425/cs/goldendome/goldendome/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../goldendomeVersionThree/src/main/java/edu/mum/cs425/cs/goldendome/goldendome/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../goldendomeVersionThree/src/main/java/edu/mum/cs425/cs/goldendome/goldendome/controller/SupplierController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../goldendomeVersionThree/src/main/java/edu/mum/cs425/cs/goldendome/goldendome/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../goldendomeVersionThree/src/main/java/edu/mum/cs425/cs/goldendome/goldendome/model/Supplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../goldendomeVersionThree/src/main/java/edu/mum/cs425/cs/goldendome/goldendome/repository/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../goldendomeVersionThree/src/main/java/edu/mum/cs425/cs/goldendome/goldendome/repository/SupplierRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../goldendomeVersionThree/src/main/java/edu/mum/cs425/cs/goldendome/goldendome/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../goldendomeVersionThree/src/main/java/edu/mum/cs425/cs/goldendome/goldendome/service/SupplierService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../goldendomeVersionThree/src/main/java/edu/mum/cs425/cs/goldendome/goldendome/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../goldendomeVersionThree/src/main/java/edu/mum/cs425/cs/goldendome/goldendome/service/impl/SupplierServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../goldendomeVersionThree/src/main/resources/templates/home/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../goldendomeVersionThree/src/main/resources/templates/product/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../goldendomeVersionThree/src/main/resources/templates/product/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../goldendomeVersionThree/src/main/resources/templates/supplier/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../goldendomeVersionThree/src/main/resources/templates/supplier/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GOLDENDOME/src/main/java/edu/mum/cs/cs425/eregister/versionone/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GOLDENDOME/src/main/java/edu/mum/cs/cs425/eregister/versionone/controller/SupplierController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GOLDENDOME/src/main/java/edu/mum/cs/cs425/eregister/versionone/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GOLDENDOME/src/main/java/edu/mum/cs/cs425/eregister/versionone/model/Supplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GOLDENDOME/src/main/java/edu/mum/cs/cs425/eregister/versionone/repository/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GOLDENDOME/src/main/java/edu/mum/cs/cs425/eregister/versionone/repository/SupplierRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GOLDENDOME/src/main/java/edu/mum/cs/cs425/eregister/versionone/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GOLDENDOME/src/main/java/edu/mum/cs/cs425/eregister/versionone/service/SupplierService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GOLDENDOME/src/main/java/edu/mum/cs/cs425/eregister/versionone/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GOLDENDOME/src/main/java/edu/mum/cs/cs425/eregister/versionone/service/impl/SupplierServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GOLDENDOME/src/main/resources/templates/home/dome.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GOLDENDOME/src/main/resources/templates/product/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GOLDENDOME/src/main/resources/templates/product/new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GOLDENDOME/src/main/resources/templates/supplier/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GOLDENDOME/src/main/resources/templates/supplier/new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GoldenDomeMarket/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GoldenDomeMarket/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GoldenDomeMarket/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GoldenDomeMarket/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/GoldenDomeMarket/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/gdmarket-Lab9/src/main/java/edu/mum/cs/cs425/goldendomemarket/gdmarket/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/gdmarket-Lab9/src/main/java/edu/mum/cs/cs425/goldendomemarket/gdmarket/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/gdmarket-Lab9/src/main/java/edu/mum/cs/cs425/goldendomemarket/gdmarket/controller/SupplierController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/gdmarket-Lab9/src/main/java/edu/mum/cs/cs425/goldendomemarket/gdmarket/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/gdmarket-Lab9/src/main/java/edu/mum/cs/cs425/goldendomemarket/gdmarket/model/Supplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/gdmarket-Lab9/src/main/java/edu/mum/cs/cs425/goldendomemarket/gdmarket/repository/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/gdmarket-Lab9/src/main/java/edu/mum/cs/cs425/goldendomemarket/gdmarket/repository/SupplierRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/gdmarket-Lab9/src/main/java/edu/mum/cs/cs425/goldendomemarket/gdmarket/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/gdmarket-Lab9/src/main/java/edu/mum/cs/cs425/goldendomemarket/gdmarket/service/SupplierService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/gdmarket-Lab9/src/main/java/edu/mum/cs/cs425/goldendomemarket/gdmarket/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/gdmarket-Lab9/src/main/java/edu/mum/cs/cs425/goldendomemarket/gdmarket/service/impl/SupplierServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/gdmarket-Lab9/src/main/resources/templates/home/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/gdmarket-Lab9/src/main/resources/templates/product/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/gdmarket-Lab9/src/main/resources/templates/product/new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/gdmarket-Lab9/src/main/resources/templates/supplier/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/gdmarket-Lab9/src/main/resources/templates/supplier/new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/model/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/model/AccountType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/resources/templates/home/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/resources/templates/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prepairFinal/department/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prepairFinal/department/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prepairFinal/department/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prepairFinal/department/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../prepairFinal/department/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../versionthreeGDM/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../versionthreeGDM/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../versionthreeGDM/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../versionthreeGDM/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../versionthreeGDM/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/controller/AccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/repository/AccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/service/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/resources/templates/account/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/resources/templates/customer/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/resources/templates/customer/new.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../preDraft/GoldenDomeMarket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../preDraft/GoldenDomeMarket/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/model/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/resources/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/resources/templates/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/resources/templates/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/../preDraft/midwestTen/src/main/resources/templates/account/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prepairFinal/department/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../prepairFinal/department/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/../../LabArchive/elibrary-democrud-web-master/target/" />
     <ignored path="$PROJECT_DIR$/../REST/elibraryrestapi/target/" />
@@ -165,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/../../LabArchive/elibrary-democrud-web-master/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+              <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -204,8 +141,8 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="273" />
     <option name="width" value="1280" />
     <option name="height" value="725" />
   </component>
@@ -346,9 +283,13 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571329734119" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571339784560" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -395,15 +336,15 @@
       <option name="presentableId" value="Default" />
       <updated>1570859606785</updated>
       <workItem from="1570859609587" duration="183000" />
-      <workItem from="1570892976347" duration="9411000" />
+      <workItem from="1570892976347" duration="9423000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9594000" />
+    <option name="totallyTimeSpent" value="9606000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="725" extended-state="1" />
+    <frame x="0" y="273" width="1280" height="725" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
@@ -524,7 +465,7 @@
     <entry file="file://$PROJECT_DIR$/../../LabArchive/elibrary-democrud-web-master/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
         </state>
       </provider>
     </entry>

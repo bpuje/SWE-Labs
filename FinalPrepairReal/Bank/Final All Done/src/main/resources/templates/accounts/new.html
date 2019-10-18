@@ -16,7 +16,9 @@
                 <span th:if="${#fields.hasErrors('customer')}" th:errors="*{customer}"
 							class="alert alert-danger"></span>
 				<select class="form-control" id="customer" th:field="*{customer}">
-					<option th:each="cus : ${customers}" th:value="${{cus.customerId}}" th:text="${cus.asText}"></option>
+					<option th:each="cus : ${customers}"
+                            th:value="${{cus.customerId}}"
+                            th:text="${cus.asText}"></option>
 				</select>
 			</div>
 			
@@ -28,11 +30,13 @@
                </div>
        	
         	<div class="form-group">
-        		<label for="accountType">Customer</label>
+        		<label for="accountType">Account Type</label>
                 <span th:if="${#fields.hasErrors('accountType')}" th:errors="*{accountType}"
 							class="alert alert-danger"></span>
 				<select class="form-control" id="accountType" th:field="*{accountType}">
-					<option th:each="at : ${accountTypes}" th:value="${{at.accountTypeId}}" th:text="${at.accountTypeName}"></option>
+					<option th:each="at : ${accountTypes}"
+                            th:value="${{at.accountTypeId}}"
+                            th:text="${at.accountTypeName}"></option>
 				</select>
 			</div>
 			
@@ -42,6 +46,7 @@
                     class="alert alert-danger"></span>
                 <input id="balance" name="balance" type="text" class="form-control" th:field="*{balance}">
             </div>
+
             <div style="float:right;">
                 <a href="/accounts/add" class="btn btn-outline-secondary" style="width: 122px;">Reset</a>&nbsp;&nbsp;&nbsp;
                 <a href="/accounts/list" class="btn btn-outline-danger" style="width: 122px;">Cancel</a>&nbsp;&nbsp;&nbsp;

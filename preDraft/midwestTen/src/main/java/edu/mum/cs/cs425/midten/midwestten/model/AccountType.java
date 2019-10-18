@@ -10,6 +10,7 @@ public class AccountType {
     @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer accountTypeId;
 
+    @Column(name = "account_type_name")
     @NotBlank(message = "Account name should be entered")
     private String accountTypeName;
 
