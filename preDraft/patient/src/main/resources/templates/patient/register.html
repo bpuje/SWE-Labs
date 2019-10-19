@@ -1,0 +1,120 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Register page</title>
+</head>
+<body>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/patient/list">Patient</a></li>
+        <li class="breadcrumb-item"><a href="/">Elderly Patients</a></li>
+    </ol>
+</nav>
+
+
+
+
+<div class="container">
+    <!-- Content here -->
+    <h2>Register New State</h2>
+    <form id="patientRegisterForm" method="post" action="/patient/register" th:object="${patient}">
+        <fieldset>
+            <input type="hidden" name="patientId" th:value="${patient.patientId}"/>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="patientNumber">Patient Number</label>
+                        <span th:if="${#fields.hasErrors('patientNumber')}" th:errors="*{patientNumber}"
+                              class="alert alert-danger"></span>
+                        <input id="patientNumber" name="patientNumber" type="text" class="form-control"
+                               th:value="${patient.patientNumber}">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="fullNames">Full Names</label>
+                        <span th:if="${#fields.hasErrors('fullNames')}" th:errors="*{fullNames}"
+                              class="alert alert-danger"></span>
+                        <input id="fullNames" name="fullNames" type="text" class="form-control"
+                               th:value="${patient.fullNames}">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="anOutPatient">anOutPatient</label>
+                        <span th:if="${#fields.hasErrors('anOutPatient')}" th:errors="*{anOutPatient}"
+                              class="alert alert-danger"></span>
+                        <select id="anOutPatient" th:field="${patient.anOutPatient}">
+                            <option value="">Select a Patient</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="emailAddress">An out Patient</label>
+                        <span th:if="${#fields.hasErrors('emailAddress')}" th:errors="*{emailAddress}"
+                              class="alert alert-danger"></span>
+                        <input id="emailAddress" name="emailAddress" type="text" class="form-control"
+                               th:value="${patient.emailAddress}">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="contactPhoneNumber">Contact Number</label>
+                        <span th:if="${#fields.hasErrors('contactPhoneNumber')}" th:errors="*{contactPhoneNumber}"
+                              class="alert alert-danger"></span>
+                        <input id="contactPhoneNumber" name="contactPhoneNumber" type="text" class="form-control"
+                               th:value="${patient.contactPhoneNumber}">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="dateOfBirth">DOB</label>
+                        <span th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}"
+                              class="alert alert-danger"></span>
+                        <input id="dateOfBirth" name="dateOfBirth" type="date" class="form-control"
+                               th:value="${patient.dateOfBirth}">
+                    </div>
+                </div>
+            </div>
+
+
+            <div style="float:left;">
+                <a href="/patient/list" class="btn btn-outline-warning">Cancel</a>&nbsp;&nbsp;&nbsp;
+                <button id="btnSubmit" type="submit" class="btn btn-outline-success">Save Patient</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

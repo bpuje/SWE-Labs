@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,6 +68,7 @@ public class AccountController {
         model.addAttribute("account", new Account());
         model.addAttribute("customers", customerService.getAllCustomers());
         model.addAttribute("accountTypes", accountTypeService.findAll());
+        model.addAttribute("new", LocalDate.now()); // baruun deed buland bairlah tsag
         return "account/new";
 
     }

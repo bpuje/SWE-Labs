@@ -43,8 +43,19 @@
                                     th:field="*{customer}">
                             <option value="">Select a Customer</option>
                             <option th:each="cus : ${customers}"
-                                    th:value="${{cus.customerId}}"
-                                    th:text="${cus.firstName}"></option>
+                                    th:value="${cus.customerId}"
+                                    th:text="${cus.firstName}">
+                            </option>
+
+
+                            <!--<option th:each="supplier : ${suppliers}"-->
+                                    <!--th:value="${supplier.supplierId}"-->
+                                    <!--th:text="${supplier.supplierNumber}-->
+                                    <!--+' - '+${supplier.name}+' '+${supplier.contactPhoneNumber}" >-->
+
+                            <!--</option>-->
+
+
                         </select>
                     </div>
                 </div>
@@ -103,8 +114,6 @@
                     </div>
                 </div>
             </div>
-
-
 
 
 

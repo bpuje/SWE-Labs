@@ -5,7 +5,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -37,7 +39,12 @@ public class Customer {
     private String emailAddress;
 
 //    @Column(name = "contact_phone_number")
+    @NotEmpty(message = "* Contact number is required.")
+    @Pattern(regexp = "((\\(\\d{3}\\) ?)|(\\d{3}-))?\\d{3}-\\d{4}", message = "* Contact number must be a valid phone number formated as (123) 456-7890.")
     private String contactPhoneNumber;
+
+
+
 
 //    @Column(name = "date_of_birth")
     @DateTimeFormat(pattern = "yyyy-MM-dd")

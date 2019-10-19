@@ -27,13 +27,11 @@ public class CustomerController {
         modelAndView.setViewName("customer/list");
         //System.out.println("================"+customerService.getAllCustomers());
         return modelAndView;
-
     }
 
     @GetMapping(value = {"/customer/new"})
     public String showNewCustomerForm(Model model){
         model.addAttribute("customer", new Customer());
-
         return "customer/new";
 
     }

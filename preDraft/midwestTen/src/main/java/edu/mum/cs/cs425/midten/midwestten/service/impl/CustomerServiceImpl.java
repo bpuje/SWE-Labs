@@ -4,6 +4,7 @@ import edu.mum.cs.cs425.midten.midwestten.model.Customer;
 import edu.mum.cs.cs425.midten.midwestten.repository.CustomerRepository;
 import edu.mum.cs.cs425.midten.midwestten.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public List<Customer> getAllCustomers() {
-        return customerRepository.findAll();
+        return customerRepository.findAll(Sort.by("lastName"));
     }
 
     @Override

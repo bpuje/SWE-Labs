@@ -13,6 +13,9 @@ public class AccountServiceImpl implements AccountService {
 
     private AccountRepository accountRepository;
 
+    private AccountService accountService;
+
+
     @Autowired
     public AccountServiceImpl(AccountRepository accountRepository) {
         this.accountRepository = accountRepository;
@@ -42,4 +45,10 @@ public class AccountServiceImpl implements AccountService {
         }
         return totalBalance;
     }
+
+//    public void testComputeNetLiq(){
+//        Double actual = accountService.computeNetLiquidity();
+//        Double expected = 484596.21;
+//        assertEquals(expected, actual, 0.10);
+//    }
 }
