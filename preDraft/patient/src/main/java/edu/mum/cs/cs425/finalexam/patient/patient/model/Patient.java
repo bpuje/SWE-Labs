@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import java.time.LocalDate;
 
 @Entity
@@ -29,7 +30,8 @@ public class Patient {
     @NotBlank(message = "Please provide email address")
     private String emailAddress; // (e.g. jhsmith@globalmail.net, awashington@hcmc.org, etc.)
 
-    @NotBlank(message = "Please provide phone number")
+    @NotEmpty(message = "* Contact number is required.")
+    @Pattern(regexp = "((\\(\\d{3}\\) ?)|(\\d{3}-))?\\d{3}-\\d{4}", message = "* Contact number must be a valid phone number formated as (123) 456-7890.")
     private String contactPhoneNumber; // (e.g. (641) 001-0012, (641) 002-0034, etc.)
 
 //    @NotBlank(message = "Please provide DOB")

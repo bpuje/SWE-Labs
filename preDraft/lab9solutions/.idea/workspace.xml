@@ -2,47 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eea322e4-5554-43b6-85ca-f5d7b0e9dacc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../citizen/src/main/java/edu/mum/cs/cs425/finalexam/citizen/controller/CitizenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../citizen/src/main/java/edu/mum/cs/cs425/finalexam/citizen/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../citizen/src/main/java/edu/mum/cs/cs425/finalexam/citizen/controller/StateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../citizen/src/main/java/edu/mum/cs/cs425/finalexam/citizen/model/Citizen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../citizen/src/main/java/edu/mum/cs/cs425/finalexam/citizen/model/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../citizen/src/main/java/edu/mum/cs/cs425/finalexam/citizen/repository/CitizenRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../citizen/src/main/java/edu/mum/cs/cs425/finalexam/citizen/repository/StateRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../citizen/src/main/java/edu/mum/cs/cs425/finalexam/citizen/service/CitizenService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../citizen/src/main/java/edu/mum/cs/cs425/finalexam/citizen/service/StateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../citizen/src/main/java/edu/mum/cs/cs425/finalexam/citizen/service/impl/CitizenServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../citizen/src/main/java/edu/mum/cs/cs425/finalexam/citizen/service/impl/StateServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../citizen/src/main/resources/templates/citizen/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../citizen/src/main/resources/templates/citizen/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../citizen/src/main/resources/templates/citizen/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../citizen/src/main/resources/templates/home/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../citizen/src/main/resources/templates/state/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../citizen/src/main/resources/templates/state/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patient/src/main/java/edu/mum/cs/cs425/finalexam/patient/patient/controller/HomeControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patient/src/main/java/edu/mum/cs/cs425/finalexam/patient/patient/controller/PatientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patient/src/main/java/edu/mum/cs/cs425/finalexam/patient/patient/model/Patient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patient/src/main/java/edu/mum/cs/cs425/finalexam/patient/patient/repository/PatientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patient/src/main/java/edu/mum/cs/cs425/finalexam/patient/patient/service/PatientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patient/src/main/java/edu/mum/cs/cs425/finalexam/patient/patient/service/impl/PatientServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patient/src/main/resources/templates/home/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patient/src/main/resources/templates/patient/elder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patient/src/main/resources/templates/patient/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../patient/src/main/resources/templates/patient/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/controller/AthleteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/model/Athlete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/repository/AthleteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/service/AthleteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/service/impl/AthleteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../midwestTen/src/main/resources/templates/athlete/elite.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../midwestTen/src/main/resources/templates/athlete/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../midwestTen/src/main/resources/templates/athlete/new.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GoldenDomeMarket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GoldenDomeMarket/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../citizen/src/main/java/edu/mum/cs/cs425/finalexam/citizen/controller/StateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../citizen/src/main/java/edu/mum/cs/cs425/finalexam/citizen/controller/StateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../citizen/src/main/java/edu/mum/cs/cs425/finalexam/citizen/model/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/../citizen/src/main/java/edu/mum/cs/cs425/finalexam/citizen/model/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../citizen/src/main/resources/templates/citizen/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../citizen/src/main/resources/templates/citizen/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../citizen/src/main/resources/templates/citizen/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../citizen/src/main/resources/templates/citizen/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../midwestTen/src/main/java/edu/mum/cs/cs425/midten/midwestten/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../midwestTen/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../midwestTen/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../midwestTen/src/main/resources/templates/account/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../midwestTen/src/main/resources/templates/account/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../midwestTen/src/main/resources/templates/account/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/../midwestTen/src/main/resources/templates/account/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../midwestTen/src/main/resources/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../midwestTen/src/main/resources/templates/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../patient/src/main/java/edu/mum/cs/cs425/finalexam/patient/patient/model/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../patient/src/main/java/edu/mum/cs/cs425/finalexam/patient/patient/model/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../patient/src/main/resources/templates/patient/elder.html" beforeDir="false" afterPath="$PROJECT_DIR$/../patient/src/main/resources/templates/patient/elder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../patient/src/main/resources/templates/patient/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../patient/src/main/resources/templates/patient/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../patient/src/main/resources/templates/patient/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/../patient/src/main/resources/templates/patient/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../prepairFinal/department/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../prepairFinal/department/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -123,7 +104,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="734" />
@@ -183,7 +164,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571457180249" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571509403635" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -220,7 +201,7 @@
     <option name="totallyTimeSpent" value="5473000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="734" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="734" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" />

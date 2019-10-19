@@ -13,10 +13,10 @@ public class State {
     @Id@GeneratedValue
     private Integer stateId;
 
-    @NotBlank(message = "required")
+    @NotBlank(message = "Please provide required")
     private String stateCode;
 
-    @NotBlank(message = "required")
+    @NotBlank(message = "Please provide required")
     private String stateName;
 
     @OneToMany(mappedBy = "state")
@@ -25,7 +25,7 @@ public class State {
     public State() {
     }
 
-    public State(@NotBlank(message = "required") String stateCode, @NotBlank(message = "required") String stateName, List<Citizen> citizens) {
+    public State(@NotBlank(message = "Please provide required") String stateCode, @NotBlank(message = "Please provide required") String stateName, List<Citizen> citizens) {
         this.stateCode = stateCode;
         this.stateName = stateName;
         this.citizens = citizens;
@@ -63,5 +63,13 @@ public class State {
         this.citizens = citizens;
     }
 
-
+    @Override
+    public String toString() {
+        return "State{" +
+                "stateId=" + stateId +
+                ", stateCode='" + stateCode + '\'' +
+                ", stateName='" + stateName + '\'' +
+                ", citizens=" + citizens +
+                '}';
+    }
 }

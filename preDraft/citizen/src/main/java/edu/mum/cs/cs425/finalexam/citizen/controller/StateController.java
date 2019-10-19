@@ -9,17 +9,19 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 
 @Controller
+@RequestMapping(value = {"/state"})
 public class StateController {
 
     @Autowired
     private StateService stateService;
 
-    @GetMapping(value = {"/state/list"})
+    @GetMapping(value = {"/list"})
     public ModelAndView displayAllState(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("stateList", stateService.getAllState());
@@ -27,14 +29,14 @@ public class StateController {
         return modelAndView;
     }
 
-    @GetMapping(value = "/state/register")
+    @GetMapping(value = "/register")
     public String displayNewStateRegisterForm(Model model){
         model.addAttribute("state", new State());
         return "state/register";
     }
 
 
-    @PostMapping(value = "/state/register")
+    @PostMapping(value = "/register")
     public String registerNewState(@Valid @ModelAttribute("state") State state,
                                    BindingResult bindingResult, Model model){
         if(bindingResult.hasErrors()){

@@ -60,7 +60,7 @@
                     <td scope="row" th:text="${citizen.state.stateName}"></td>
                     <td scope="row" th:text="${citizen.socialSecurityNumber}"></td>
                     <td scope="row" th:text="${citizen.dateOfBirth}"></td>
-                    <td scope="row" th:text="${citizen.yearlyIncome}"></td>
+                    <td scope="row" th:text="${#numbers.formatCurrency(citizen.yearlyIncome)}"></td>
 
                     <td><a th:href="@{'/citizen/edit/{citizenId}'(citizenId=${citizen.citizenId})}">Edit</a> </td>
                     <td><a th:href="@{'/citizen/delete/{citizenId}'(citizenId=${citizen.citizenId})}">Delete</a> </td>
@@ -91,6 +91,8 @@
             Total Income (USD):
         </b>
     </div>
+
+    <div th:text="${#numbers.formatCurrency(net)}"></div>
 
     <div style="font-size: 1em">
         <table class="table table-striped">

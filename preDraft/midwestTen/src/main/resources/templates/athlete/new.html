@@ -1,0 +1,150 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Register page</title>
+</head>
+<body>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Adidasler Prolethics::: eTalent Data Manager(eTDM)</a>
+        <li class="breadcrumb-item"><a href="/apm/athlete/list">Athletes</a></li>
+        <li class="breadcrumb-item"><a href="/apm/athlete/elite">Elite Athletes</a></li>
+    </ol>
+</nav>
+
+
+
+<div style="padding-top:1em;" class="container">
+    <div style="margin-bottom: 1em;">
+        <span style="font-size: 2em; color: #32a5e7;">New Athletes Form</span>
+    </div>
+
+    <form id="newAthleteForm" method="post" action="/apm/athlete/new" th:object="${athlete}">
+        <fieldset>
+            <input type="hidden" name="athleteId" th:value="${athlete.athleteId}"/>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="ssn">Social Security Number:</label>
+                        <span th:if="${#fields.hasErrors('ssn')}" th:errors="*{ssn}"
+                              class="alert alert-danger"></span>
+                        <input id="ssn" name="ssn" type="text" class="form-control"
+                               th:value="${athlete.ssn}">
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+                        <span th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}"
+                              class="alert alert-danger"></span>
+                        <input id="fullName" name="fullName" type="text" class="form-control"
+                               th:value="${athlete.fullName}">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number:</label>
+                        <span th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"
+                              class="alert alert-danger"></span>
+                        <input id="phoneNumber" name="phoneNumber" type="text" class="form-control"
+                               th:value="${athlete.phoneNumber}">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="emailAddress">Email Address:</label>
+                        <span th:if="${#fields.hasErrors('emailAddress')}" th:errors="*{emailAddress}"
+                              class="alert alert-danger"></span>
+                        <input id="emailAddress" name="emailAddress" type="text" class="form-control"
+                               th:value="${athlete.emailAddress}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="dateOfBirth">DOB:</label>
+                        <span th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}"
+                              class="alert alert-danger"></span>
+                        <input id="dateOfBirth" name="dateOfBirth" type="date" class="form-control"
+                               th:value="${athlete.dateOfBirth}">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="dateOfRegistration">Date Of Registrationr:</label>
+                        <span th:if="${#fields.hasErrors('dateOfRegistration')}" th:errors="*{dateOfRegistration}"
+                              class="alert alert-danger"></span>
+                        <input id="dateOfRegistration" name="dateOfRegistration" type="date" class="form-control"
+                               th:value="${athlete.dateOfRegistration}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="totalNumberOfMedalsWon">Total Number Of Medals Won:</label>
+                        <span th:if="${#fields.hasErrors('totalNumberOfMedalsWon')}" th:errors="*{totalNumberOfMedalsWon}"
+                              class="alert alert-danger"></span>
+                        <input id="totalNumberOfMedalsWon" name="totalNumberOfMedalsWon" type="text" class="form-control"
+                               th:value="${athlete.totalNumberOfMedalsWon}">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="monthlySalary">Monthly Salary:</label>
+                        <span th:if="${#fields.hasErrors('monthlySalary')}" th:errors="*{monthlySalary}"
+                              class="alert alert-danger"></span>
+                        <input id="monthlySalary" name="monthlySalary" type="text" class="form-control"
+                               th:value="${athlete.monthlySalary}">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div style="float:right;">
+                <a href="/athlete/new" class="btn btn-outline-secondary">Reset</a>&nbsp;&nbsp;&nbsp;
+                <a href="/apm/athlete/list" class="btn btn-outline-warning">Cancel</a>&nbsp;&nbsp;&nbsp;
+                <button id="btnSubmit" type="submit" class="btn btn-outline-success">Save Account</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted">Purevdemberel Byambatogtokh : : : CS425-SWE</span>
+        <span style="float:right;" class="text-muted">&copy; October 2019</span>
+    </div>
+</footer>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
